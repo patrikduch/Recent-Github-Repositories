@@ -42,3 +42,27 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+
+
+# Test task:
+
+- implement a small client app in React / Redux that discovers trending repositories in GitHub.
+
+- your app will show a list of most popular repositories of last week.
+ - some basic info about the repo should be displayed, such as: repo name, link to GitHub, description and number of stars
+- Level 2 of the implementation: add possibility for the user to star each displayed repository. To make things easy, only store this stars information in the client's browser. Have the ability to filter in the list repos, that user has starred.
+Details for implementation:
+
+* GitHub public endpoint is: https://api.github.com/ and the URL to obtain all repositories, created after 1.7.2020, sorted by amount of starts, descending, is https://api.github.com/search/repositories?q=created:%3E2020-07-01&sort=stars&order=desc
+
+* Use some common boilerplate such as create-react-app or your own
+
+* Choice of technologies is up to you (but you have a feeling that you heard client's CTO loves to see React Hooks being used ;-) )
+* Do tests as much as possible
+* Try to have as much clean, concise code and semantic HTML as possible
+
+* Provide us with some repository (ideally private - bitbucket) that we can review. Use hnz_kkk_ bitbucket ID to share your repository to, when done.
+Regards, Jan
