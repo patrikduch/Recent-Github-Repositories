@@ -7,18 +7,23 @@ import * as githubRepositoryActions from "../../actions/github/github-repository
 // Components to connect
 import GithubRepository from "../../../connected-components/github/Github-Repository";
 
-
 import { bindActionCreators, Dispatch } from "redux";
 import { ApplicationState } from "../../reducers";
 
-// mapping state from reducer to the  specific component
+/**
+ * @function  mapStateToProps => mapping state from reducer to the  specific component.
+ * @param state => New state that will be mapped.
+ */
 const mapStateToProps = (state: ApplicationState) => {
   return {
     repositories: state.github.repositories
   };
 };
 
-// mapping actions to the specific component
+/**
+ * @function mapDispatchToProps => mapping actions to the specific component.
+ * @param dispatch => Dispatching new state into Redux store.
+ */
 const mapDispatchToProps = (dispatch: Dispatch) => {
   return {
     actions: bindActionCreators(githubRepositoryActions, dispatch),

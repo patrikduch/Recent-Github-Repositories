@@ -5,7 +5,6 @@ import { GithubRepositoryType } from "../../redux/store/github/types";
  * @type PropsType => Component's props type.
  */
 type PropsType = {
-
     pageNumber: number;
     repositories: GithubRepositoryType[];
 }

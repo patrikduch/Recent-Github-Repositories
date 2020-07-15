@@ -7,7 +7,6 @@ import initialState from "../initial-state";
 /* Type checking. */
 import { Reducer, AnyAction } from 'redux';
 import { GithubState, GithubRepositoryType } from "../../store/github/types";
-import GithubRepositoryPropsType from "../../../typescript/types/shared/connected-components/github/Github-Repository-Type-Props";
 
 /**
  * @interface ActionPayload => Payload of incoming action of Github repository reducer.
@@ -19,8 +18,6 @@ interface ActionPayload extends AnyAction {
     };
   }
 }
-
-
 
 /**
  * @function githubRepositoryReducer => Reducer for managing Github repositories via Redux.

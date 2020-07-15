@@ -1,11 +1,13 @@
-// ./src/store/chat/types.ts
-
+/**
+ * @type GithubRepositoryType => Type anotation for Github repositories collection.
+ */
 export type GithubRepositoryType = {
    name: string;
 }
 
-
-// Our chat-level state object
+/**
+ * @interface GithubState => Type anotation for Github repos reducer.   
+ */
 export interface GithubState {
    repositories: GithubRepositoryType[]
 }

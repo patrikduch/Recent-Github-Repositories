@@ -5,7 +5,9 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav} from 'reactstrap';
-
+/**
+ * @function NavigationBar => Bootstrap top navigation bar.
+ */
 const NavigationBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 

@@ -1,5 +1,3 @@
-// ./stc/configureStore.ts
-
 import { createStore, applyMiddleware, Store } from 'redux';
 
 import thunk from "redux-thunk";
