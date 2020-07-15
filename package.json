@@ -24,7 +24,8 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.1.1",
-    "typescript": "~3.7.2"
+    "typescript": "~3.7.2",
+    "uniqid": "^5.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -55,6 +56,7 @@
     "@types/reactstrap": "^8.5.0",
     "@types/sinon": "^9.0.4",
     "@types/styled-components": "^5.1.1",
+    "@types/uniqid": "^5.2.0",
     "boostrap": "^2.0.0",
     "bootstrap": "^4.5.0",
     "enzyme": "^3.11.0",
