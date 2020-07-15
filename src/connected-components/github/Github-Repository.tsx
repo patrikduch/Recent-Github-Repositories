@@ -29,9 +29,7 @@ const GithubRepository: React.FC<GithubRepositoryPropsType> = (props: GithubRepo
 
     return (
         <Container>
-    
             <GithubRepositoryList incrementStarRating={props.actions.incrementStarRating} pageNumber={pageNumber} repositories={props.repositories} />
-        
             {props.repositories.length > 0 && <Row style={{paddingTop: "2.5vh"}}>
                 <Col>
                     <Pagination
@@ -45,7 +43,6 @@ const GithubRepository: React.FC<GithubRepositoryPropsType> = (props: GithubRepo
                     />
                 </Col>
             </Row> }
-     
         </Container>
     )
 }

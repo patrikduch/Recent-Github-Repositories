@@ -4,11 +4,8 @@ import { GithubRepositoryType } from "../../../redux/store/github/types";
 import GithubRepositoryContainer from "./Github-Repository-List-Container";
 import Paragraph from "../../common/Paragraph";
 import Url from "../../common/Url";
-import { Badge } from "reactstrap";
 import GithubRepositoryStarsBadge from "./Github-Repository-Stars-Badge";
 import GithubRepositoryAddStar from "./Github-Repository-Add-Star";
-
-
 
 /**
  * @type PropsType => Component's props type.

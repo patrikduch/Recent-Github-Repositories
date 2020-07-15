@@ -9,8 +9,6 @@ export const fetchNewestRepos = () => async (dispatch: Dispatch) => {
   try {
     const response = await GithubAPI.fetchNewestRepos();
 
-    debugger;
-
     dispatch({
       type: actionTypes.FETCH_NEWEST_REPOS_SUCCESS,
       payload: response,
@@ -27,9 +25,9 @@ export const fetchNewestRepos = () => async (dispatch: Dispatch) => {
   }
 };
 
-
 /**
  * @function incrementStarRating => Action creator that increments number of stars from particular selected item.
+ * @param itemId => numeric item identifier.
  */
 export const incrementStarRating = (itemId: number) => async (dispatch: Dispatch) => {
 
