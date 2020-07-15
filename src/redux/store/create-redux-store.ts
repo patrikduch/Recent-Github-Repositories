@@ -7,8 +7,6 @@ import thunk from "redux-thunk";
 import { composeWithDevTools } from 'redux-devtools-extension';
 import reducers, { ApplicationState } from '../reducers';
 import { initialState } from '../reducers/initial-state';
-// If you use react-router, don't forget to pass in your history type.
-
 
 export function configureStore(
 ): Store<ApplicationState> {
