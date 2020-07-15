@@ -34,7 +34,7 @@ const GithubRepository: React.FC<GithubRepositoryPropsType> = (props: GithubRepo
                      <GithubRepositoryList pageNumber={pageNumber} repositories={props.repositories} />
                 </Col>
             </Row>
-            <Row style={{paddingTop: "2.5vh"}}>
+            {props.repositories.length > 0 && <Row style={{paddingTop: "2.5vh"}}>
                 <Col>
                     <Pagination
                         activePage={pageNumber}
@@ -46,7 +46,8 @@ const GithubRepository: React.FC<GithubRepositoryPropsType> = (props: GithubRepo
                         linkClass="page-link"
                     />
                 </Col>
-            </Row>
+            </Row> }
+     
         </Container>
     )
 }
