@@ -40,7 +40,7 @@ const githubRepositoryReducer: Reducer<GithubState, ActionPayload> = (
 
     case actionTypes.INCREMENT_REPO_RATING:
 
-      const itemIndex = state.repositories.findIndex((obj => obj.id == action.payload.data.itemId));
+      const itemIndex = state.repositories.findIndex((obj => obj.id === action.payload.data.itemId));
 
       let index = state.repositories.findIndex(rep => rep.id === action.payload.data.itemId);
       let updatedRepositories = [...state.repositories];

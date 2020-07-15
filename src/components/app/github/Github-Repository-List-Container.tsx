@@ -2,7 +2,7 @@ import React from "react";
 
 import styled from "styled-components";
 import IStyledComponentProps from "../../../typescript/interfaces/shared/styled-components/IStyled-React-Component";
-import { Container, Row, Col } from "reactstrap";
+import { Row, Col } from "reactstrap";
 
 /**
  * @function GithubRepositoryListContainer => 
