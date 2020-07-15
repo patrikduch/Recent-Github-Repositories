@@ -5,6 +5,9 @@ import GithubRepositoryContainer from "./Github-Repository-List-Container";
 import Paragraph from "../../common/Paragraph";
 import Url from "../../common/Url";
 import { Badge } from "reactstrap";
+import GithubRepositoryStarsBadge from "./Github-Repository-Stars-Badge";
+import GithubRepositoryAddStar from "./Github-Repository-Add-Star";
+
 
 
 /**
@@ -31,7 +34,8 @@ const GithubRepositoryList: React.FC<PropsType> = ({pageNumber, repositories}) =
 
             return (
                 <GithubRepositoryContainer>
-                    {item.name} <Badge color="secondary">{item.stargazers_count}</Badge>
+                    {item.name} <GithubRepositoryAddStar />
+                    <GithubRepositoryStarsBadge starCount={item.stargazers_count} />
                     <Paragraph>{item.description}</Paragraph>
                     <Url url={item.html_url}>{item.html_url}</Url>
                 </GithubRepositoryContainer>
