@@ -4,9 +4,17 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+// Redux integration
+import { Provider } from "react-redux";
+import { configureStore } from './redux/store/create-redux-store';
+import initialState from './redux/reducers/initial-state';
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+     <Provider store={configureStore()}>
+        <App />
+     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
