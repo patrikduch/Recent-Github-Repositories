@@ -5,26 +5,39 @@ import * as actionTypes from "../../actions/action-types";
 import initialState from "../initial-state";
 
 /* Type checking. */
-import { Reducer } from 'redux';
-import { GithubState } from "../../store/github/types";
+import { Reducer, AnyAction } from 'redux';
+import { GithubState, GithubRepositoryType } from "../../store/github/types";
+import GithubRepositoryPropsType from "../../../typescript/types/shared/connected-components/github/Github-Repository-Type-Props";
 
 /**
- * @function projectDetailReducer => Project detail info management.
- * @param state   => Initial state for project detail`s reducer.
- * @param action  => Action that enters into project detail`s reducer.
+ * @interface ActionPayload => Payload of incoming action of Github repository reducer.
  */
-const githubRepositoryReducer: Reducer<GithubState> = (
+interface ActionPayload extends AnyAction {
+  payload: {
+    data: {
+      items: GithubRepositoryType[]
+    };
+  }
+}
+
+
+
+/**
+ * @function githubRepositoryReducer => Reducer for managing Github repositories via Redux.
+ * @param state   => Initial state for project detail`s reducer.
+ * @param action  => Action that enters into Github repositories`s reducer.
+ */
+const githubRepositoryReducer: Reducer<GithubState, ActionPayload> = (
   state: GithubState = initialState.github,
-  action
+  action: ActionPayload
 ) => {
   switch (action.type) {
 
     case actionTypes.FETCH_NEWEST_REPOS_SUCCESS: 
 
-    debugger;
-
     return {
-      ...state
+      ...state,
+      repositories: action.payload.data.items
     }
 
 

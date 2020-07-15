@@ -8,19 +8,19 @@ import GithubRepositoryPropsType from "../../typescript/types/shared/connected-c
 const GithubRepository: React.FC<GithubRepositoryPropsType> = (props: GithubRepositoryPropsType) => {
 
     useDidMount(() => {
-
-        const test = props;
-        debugger;
-
         props.actions.fetchNewestRepos();
-        
-
-
     });
+
+    const renderRepositories = () => {
+        return props.repositories.slice(0.5).map((item) => {
+        return <p>{item.name}</p>
+        })
+    }
 
     return (
         <>
-            <h1>Repozitáře</h1>
+            <h1>TOP 5 Github repozitářů</h1>
+            {renderRepositories()}
 
         </>
     )

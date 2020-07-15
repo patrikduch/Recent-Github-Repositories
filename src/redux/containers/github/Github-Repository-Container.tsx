@@ -9,11 +9,12 @@ import GithubRepository from "../../../connected-components/github/Github-Reposi
 
 
 import { bindActionCreators, Dispatch } from "redux";
+import { ApplicationState } from "../../reducers";
 
 // mapping state from reducer to the  specific component
-const mapStateToProps = (state: {}) => {
+const mapStateToProps = (state: ApplicationState) => {
   return {
-    projectDetail: null
+    repositories: state.github.repositories
   };
 };
 
@@ -28,7 +29,7 @@ const GithubRepositoryContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(
-  (GithubRepository as unknown) as ConnectedComponent<
+  GithubRepository as ConnectedComponent<
     React.FC,
     Pick<{}, never>
   >
