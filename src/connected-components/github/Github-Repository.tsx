@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import useDidMount from "../../hooks/dom/component.didmount.hook";
-import GithubRepositoryPropsType from "../../typescript/types/shared/connected-components/github/Github-Repository-Type-Props";
+import GithubRepositoryPropsType from "../../typescript/types/connected-components/github/Github-Repository-Type-Props";
 
 import { Container, Row, Col } from 'reactstrap';
 
