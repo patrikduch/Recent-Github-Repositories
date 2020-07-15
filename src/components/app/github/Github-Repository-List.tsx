@@ -16,6 +16,7 @@ import GithubRepositoryAddStar from "./Github-Repository-Add-Star";
 type PropsType = {
     pageNumber: number;
     repositories: GithubRepositoryType[];
+    incrementStarRating: (itemId: number) => void;
 }
 
 /**
@@ -23,7 +24,7 @@ type PropsType = {
  * @param pageNumber => Numeric page identifier.
  * @param repositories => Collection of all Github repositories.
  */
-const GithubRepositoryList: React.FC<PropsType> = ({pageNumber, repositories}) => {
+const GithubRepositoryList: React.FC<PropsType> = ({incrementStarRating, pageNumber, repositories}) => {
     /**
      * @function renderRepositories => Processing of fetched data into viewable format.
      */
@@ -34,7 +35,7 @@ const GithubRepositoryList: React.FC<PropsType> = ({pageNumber, repositories}) =
 
             return (
                 <GithubRepositoryContainer>
-                    {item.name} <GithubRepositoryAddStar />
+                    {item.name} <GithubRepositoryAddStar incrementStarRating={() => incrementStarRating(item.id)} />
                     <GithubRepositoryStarsBadge starCount={item.stargazers_count} />
                     <Paragraph>{item.description}</Paragraph>
                     <Url url={item.html_url}>{item.html_url}</Url>

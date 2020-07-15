@@ -26,3 +26,20 @@ export const fetchNewestRepos = () => async (dispatch: Dispatch) => {
     });
   }
 };
+
+
+/**
+ * @function incrementStarRating => Action creator that increments number of stars from particular selected item.
+ */
+export const incrementStarRating = (itemId: number) => async (dispatch: Dispatch) => {
+
+    dispatch({
+      type: actionTypes.INCREMENT_REPO_RATING,
+      payload: {
+        data: {
+          itemId
+        }
+      }
+    });
+};
+

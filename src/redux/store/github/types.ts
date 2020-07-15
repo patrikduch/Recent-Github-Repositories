@@ -4,6 +4,7 @@
 export type GithubRepositoryType = {
    description: string;
    html_url: string;
+   id: number;
    name: string;
    stargazers_count: number;
 }

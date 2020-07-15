@@ -8,6 +8,7 @@ type GithubRepositoryPropsType = {
 
     actions: {
       fetchNewestRepos: () => void;
+      incrementStarRating: (itemId: number) => void;
     }
   };
   

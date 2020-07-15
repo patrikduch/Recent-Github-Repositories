@@ -15,6 +15,7 @@ interface ActionPayload extends AnyAction {
   payload: {
     data: {
       items: GithubRepositoryType[]
+      itemId: number;
     };
   }
 }
@@ -32,10 +33,23 @@ const githubRepositoryReducer: Reducer<GithubState, ActionPayload> = (
 
     case actionTypes.FETCH_NEWEST_REPOS_SUCCESS: 
 
-    return {
-      ...state,
-      repositories: action.payload.data.items
-    }
+      return {
+        ...state,
+        repositories: action.payload.data.items
+      }
+
+    case actionTypes.INCREMENT_REPO_RATING:
+
+      const itemIndex = state.repositories.findIndex((obj => obj.id == action.payload.data.itemId));
+
+      let index = state.repositories.findIndex(rep => rep.id === action.payload.data.itemId);
+      let updatedRepositories = [...state.repositories];
+      updatedRepositories[index] = {...updatedRepositories[index], stargazers_count: state.repositories[itemIndex].stargazers_count + 1};
+
+      return {
+        ...state,
+        repositories: updatedRepositories
+      }
 
 
     default:
