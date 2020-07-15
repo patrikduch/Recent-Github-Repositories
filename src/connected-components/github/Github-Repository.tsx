@@ -7,7 +7,6 @@ import { Container, Row, Col } from 'reactstrap';
 import Pagination from "react-js-pagination";
 import GithubRepositoryList from "../../components/github/Github-Repository-List";
 
-
 /**
  * @function GithubRepository => Connected Redux component which manipulates with current Github repositories.
  */
@@ -39,7 +38,7 @@ const GithubRepository: React.FC<GithubRepositoryPropsType> = (props: GithubRepo
                 <Col>
                     <Pagination
                         activePage={pageNumber}
-                        itemsCountPerPage={25}
+                        itemsCountPerPage={5}
                         totalItemsCount={props.repositories.length}
                         pageRangeDisplayed={12}
                         onChange={handlePageChange}

@@ -2,7 +2,9 @@
  * @type GithubRepositoryType => Type anotation for Github repositories collection.
  */
 export type GithubRepositoryType = {
+   description: string;
    name: string;
+   url: string;
 }
 
 /**
