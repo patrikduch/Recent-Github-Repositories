@@ -4,6 +4,7 @@ import { GithubRepositoryType } from "../../../redux/store/github/types";
 import GithubRepositoryContainer from "./Github-Repository-List-Container";
 import Paragraph from "../../common/Paragraph";
 import Url from "../../common/Url";
+import { Badge } from "reactstrap";
 
 
 /**
@@ -30,7 +31,7 @@ const GithubRepositoryList: React.FC<PropsType> = ({pageNumber, repositories}) =
 
             return (
                 <GithubRepositoryContainer>
-                    {item.name}
+                    {item.name} <Badge color="secondary">{item.stargazers_count}</Badge>
                     <Paragraph>{item.description}</Paragraph>
                     <Url url={item.html_url}>{item.html_url}</Url>
                 </GithubRepositoryContainer>

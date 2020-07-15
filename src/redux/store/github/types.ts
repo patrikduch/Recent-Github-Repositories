@@ -3,8 +3,9 @@
  */
 export type GithubRepositoryType = {
    description: string;
-   name: string;
    html_url: string;
+   name: string;
+   stargazers_count: number;
 }
 
 /**
