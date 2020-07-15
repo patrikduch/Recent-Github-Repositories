@@ -5,7 +5,7 @@ import GithubRepositoryPropsType from "../../typescript/types/shared/connected-c
 import { Container, Row, Col } from 'reactstrap';
 
 import Pagination from "react-js-pagination";
-import GithubRepositoryList from "../../components/github/Github-Repository-List";
+import GithubRepositoryList from "../../components/app/github/Github-Repository-List";
 
 /**
  * @function GithubRepository => Connected Redux component which manipulates with current Github repositories.
@@ -34,7 +34,7 @@ const GithubRepository: React.FC<GithubRepositoryPropsType> = (props: GithubRepo
                      <GithubRepositoryList pageNumber={pageNumber} repositories={props.repositories} />
                 </Col>
             </Row>
-            <Row style={{paddingTop: "1vh"}}>
+            <Row style={{paddingTop: "2.5vh"}}>
                 <Col>
                     <Pagination
                         activePage={pageNumber}

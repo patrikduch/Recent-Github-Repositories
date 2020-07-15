@@ -4,7 +4,7 @@
 export type GithubRepositoryType = {
    description: string;
    name: string;
-   url: string;
+   html_url: string;
 }
 
 /**

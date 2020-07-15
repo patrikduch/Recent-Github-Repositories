@@ -1,7 +1,10 @@
 import React from "react";
-import { GithubRepositoryType } from "../../redux/store/github/types";
+import { GithubRepositoryType } from "../../../redux/store/github/types";
 
-import ReactStars from "react-rating-stars-component";
+import GithubRepositoryContainer from "./Github-Repository-List-Container";
+import Paragraph from "../../common/Paragraph";
+import Url from "../../common/Url";
+
 
 /**
  * @type PropsType => Component's props type.
@@ -17,15 +20,6 @@ type PropsType = {
  * @param repositories => Collection of all Github repositories.
  */
 const GithubRepositoryList: React.FC<PropsType> = ({pageNumber, repositories}) => {
-
-    /**
-     * @function ratingChangeHandler => Event handler that is responsible for rating stars manipulations.
-     * @param newRating 
-     */
-    const ratingChanged = (newRating: number) => {
-        console.log(newRating);
-    };
-
     /**
      * @function renderRepositories => Processing of fetched data into viewable format.
      */
@@ -35,17 +29,11 @@ const GithubRepositoryList: React.FC<PropsType> = ({pageNumber, repositories}) =
         return paginationElements.map((item) => {
 
             return (
-                <div style={{marginBottom: "1.5vh"}}>
+                <GithubRepositoryContainer>
                     {item.name}
-                    <p>{item.description}</p>
-                    <p>{item.url}</p>
-                    <ReactStars
-                        count={5}
-                        onChange={ratingChanged}
-                        size={24}
-                        activeColor="#ffd700"
-                    />
-                </div>
+                    <Paragraph>{item.description}</Paragraph>
+                    <Url url={item.html_url}>{item.html_url}</Url>
+                </GithubRepositoryContainer>
             )
         });    
     }
