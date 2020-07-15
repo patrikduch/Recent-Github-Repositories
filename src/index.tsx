@@ -7,7 +7,7 @@ import * as serviceWorker from './serviceWorker';
 // Redux integration
 import { Provider } from "react-redux";
 import { configureStore } from './redux/store/create-redux-store';
-import initialState from './redux/reducers/initial-state';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 ReactDOM.render(

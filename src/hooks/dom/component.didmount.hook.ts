@@ -7,7 +7,7 @@ import { useEffect } from "react";
 const useDidMount = (callback: Function) => {
   useEffect(() => {
     callback();
-  });
+  },[]);
 }
 
 export default useDidMount;
