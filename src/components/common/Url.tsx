@@ -17,13 +17,9 @@ interface IProps extends IStyledComponentProps {
  * @param url => Target Hypertext url address.
  */
 const Url: React.FC<IProps> = ({children, className, url}) => {
-
     return (
     <a className={className} href={url}>{children}</a>
     )
 }
 
-export default styled(Url)`
-
-
-`;
+export default styled(Url)``;
