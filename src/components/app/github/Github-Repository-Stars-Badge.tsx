@@ -7,7 +7,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import IStyledComponentProps from "../../../typescript/interfaces/shared/styled-components/IStyled-React-Component";
 
 /**
- * @interface IProps => Componen's props interface.
+ * @interface IProps => Component's props interface.
  */
 interface IProps extends IStyledComponentProps {
     starCount: number;
@@ -26,4 +26,4 @@ const GithubRepositoryStarsBadge: React.FC<IProps> = ({className, starCount}) =>
 }
 
 export default styled(GithubRepositoryStarsBadge)`
-`
+`   
