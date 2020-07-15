@@ -1,11 +1,16 @@
 import React from "react";
 import { GithubRepositoryType } from "../../../redux/store/github/types";
 
-import GithubRepositoryContainer from "./Github-Repository-List-Container";
+import GithubItemRepository from "./Github-Item-Repository";
 import Paragraph from "../../common/Paragraph";
 import Url from "../../common/Url";
 import GithubRepositoryStarsBadge from "./Github-Repository-Stars-Badge";
 import GithubRepositoryAddStar from "./Github-Repository-Add-Star";
+
+
+import keyGen from "../../../helpers/dynamic-rendering/key-generator";
+
+
 
 /**
  * @type PropsType => Component's props type.
@@ -31,12 +36,12 @@ const GithubRepositoryList: React.FC<PropsType> = ({incrementStarRating, pageNum
         return paginationElements.map((item) => {
 
             return (
-                <GithubRepositoryContainer>
+                <GithubItemRepository key={keyGen()} >
                     {item.name} <GithubRepositoryAddStar incrementStarRating={() => incrementStarRating(item.id)} />
                     <GithubRepositoryStarsBadge starCount={item.stargazers_count} />
                     <Paragraph>{item.description}</Paragraph>
                     <Url url={item.html_url}>{item.html_url}</Url>
-                </GithubRepositoryContainer>
+                </GithubItemRepository>
             )
         });    
     }
