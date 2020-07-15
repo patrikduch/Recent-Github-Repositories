@@ -17,6 +17,9 @@ interface IProps extends IStyledComponentProps {
  */
 const GithubRepositoryAddStar: React.FC<IProps> = ({incrementStarRating}) => {
 
+    /**
+     * @function incrementRatingHandler => Event handler that is responsible for increasing star ranking of particular Github repository.
+     */
     const incrementRatingHandler = () =>  {
         incrementStarRating();
     }
