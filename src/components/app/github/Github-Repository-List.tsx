@@ -46,6 +46,8 @@ const GithubRepositoryList: React.FC<PropsType> = ({incrementStarRating, pageNum
         });    
     }
 
+    if (repositories.length === 0) return null;
+
     return (
         <div>
             {renderRepositories()}

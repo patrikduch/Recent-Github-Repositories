@@ -18,6 +18,6 @@ describe('<GithubRepositoryStarsBadge />', () => {
     it('do not render Github repos  with negative star count', () => {
         const component = mount(<GithubRepositoryStarsBadge starCount={-200}  />);
         expect(component === null);
-      });
+    });
   
 });

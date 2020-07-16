@@ -8,6 +8,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import reducers, { ApplicationState } from '../reducers';
 import { initialState } from '../reducers/initial-state';
 
+
 export function configureStore(
 ): Store<ApplicationState> {
   // create the composing function for our middlewares
