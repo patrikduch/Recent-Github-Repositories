@@ -33,7 +33,7 @@ const GithubRepository: React.FC<GithubRepositoryPropsType> = (props: GithubRepo
 
     useEffect(() => {
         if (isMounted && location.pathname === "/") {
-            githubReposInit();
+            setPageNumber(1);
         }
     }, [location]);
 
