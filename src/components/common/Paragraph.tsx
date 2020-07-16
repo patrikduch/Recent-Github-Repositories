@@ -1,10 +1,8 @@
 import React from "react";
-
 import styled from "styled-components";
 import IStyledComponentProps from "../../typescript/interfaces/shared/styled-components/IStyled-React-Component";
 
 const Paragraph: React.FC<IStyledComponentProps> = ({children, className }) => {
-
     return (
         <p className={className}>
             {children}

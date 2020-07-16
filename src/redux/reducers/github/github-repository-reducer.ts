@@ -9,7 +9,6 @@ import { Reducer } from 'redux';
 import { GithubState } from "../../store/github/types";
 import IGithubReducerAction from "../../../typescript/interfaces/app/redux/reducers/github/IGithub-Reducer-Action";
 
-
 /**
  * @function githubRepositoryReducer => Reducer for managing Github repositories via Redux.
  * @param state   => Initial state for project detail`s reducer.
@@ -40,8 +39,7 @@ const githubRepositoryReducer: Reducer<GithubState, IGithubReducerAction> = (
         ...state,
         repositories: updatedRepositories
       }
-
-
+      
     default:
       return state;
   }

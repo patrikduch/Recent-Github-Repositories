@@ -9,7 +9,7 @@ const Header: React.FC = () => {
         <header>
             <NavigationBar />
         </header>
-    )
+    );
 }
 
 export default Header;

@@ -16,7 +16,6 @@ interface IProps extends IStyledComponentProps {
  * @param incrementStarRating =>  Redux action that invokes ncremental change ond Redux store.
  */
 const GithubRepositoryAddStar: React.FC<IProps> = ({incrementStarRating}) => {
-
     /**
      * @function incrementRatingHandler => Event handler that is responsible for increasing star ranking of particular Github repository.
      */
@@ -26,7 +25,7 @@ const GithubRepositoryAddStar: React.FC<IProps> = ({incrementStarRating}) => {
 
     return (
         <FontAwesomeIcon icon={faStar} onClick={incrementRatingHandler}/>
-    )
+    );
 }
 
 export default GithubRepositoryAddStar;

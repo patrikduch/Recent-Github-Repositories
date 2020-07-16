@@ -9,7 +9,6 @@ interface IProps extends IStyledComponentProps {
     url: string;
 }
 
-
 /**
  * @function Url => Common component that encapsulates Hypertext url functionality.
  * @param children => Passed React node.

@@ -27,7 +27,7 @@ const GithubRepositoryStarsBadge: React.FC<IProps> = ({className, starCount}) =>
         <div>
             <Badge className={className} color="secondary">{starCount}<FontAwesomeIcon icon={faStar} /></Badge>
         </div>
-    )
+    );
 }
 
 export default styled(GithubRepositoryStarsBadge)`

@@ -9,8 +9,8 @@ import reducers, { ApplicationState } from '../reducers';
 import { initialState } from '../reducers/initial-state';
 
 
-export function configureStore(
-): Store<ApplicationState> {
+export const configureStore = (
+): Store<ApplicationState> => {
   // create the composing function for our middlewares
   const composeEnhancers = composeWithDevTools({});
 

@@ -12,7 +12,6 @@ import { configureStore } from './redux/store/create-redux-store';
 // React router 
 import { BrowserRouter } from "react-router-dom";
 
-
 ReactDOM.render(
    <BrowserRouter>
       <Provider store={configureStore()}>

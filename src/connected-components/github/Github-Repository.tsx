@@ -16,7 +16,6 @@ const GithubRepository: React.FC<GithubRepositoryPropsType> = (props: GithubRepo
 
     const [pageNumber, setPageNumber] = useState(0);
     const [isMounted, setIsMounted] = useState(false);
-
     const location = useLocation();
 
     /**
@@ -38,8 +37,6 @@ const GithubRepository: React.FC<GithubRepositoryPropsType> = (props: GithubRepo
         }
     }, [location]);
 
-
-
     /**
      * @function handlePageChange => Event handler that is used in Pagination for changing selected page number.
      * @param pageNumber => New page identifier.
@@ -47,7 +44,6 @@ const GithubRepository: React.FC<GithubRepositoryPropsType> = (props: GithubRepo
     const handlePageChange = (pageNumber: number) => {
         setPageNumber(pageNumber)
     }
-
 
     return (
         <Container>
