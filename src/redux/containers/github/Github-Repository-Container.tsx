@@ -9,6 +9,7 @@ import GithubRepository from "../../../connected-components/github/Github-Reposi
 
 import { bindActionCreators, Dispatch } from "redux";
 import { ApplicationState } from "../../reducers";
+import { getGithubRepos } from "../../selectors/github/github-repository-selector";
 
 /**
  * @function  mapStateToProps => mapping state from reducer to the  specific component.
@@ -16,7 +17,7 @@ import { ApplicationState } from "../../reducers";
  */
 const mapStateToProps = (state: ApplicationState) => {
   return {
-    repositories: state.github.repositories
+    repositories: getGithubRepos(state.github)
   };
 };
 
